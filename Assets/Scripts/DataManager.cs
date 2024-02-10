@@ -20,8 +20,9 @@ public class DataManager : MonoBehaviour
     public UnityEvent updateTeamView;
     void Start()
     {
-        eventKey = "2024cmptx";
-        if (SceneManager.GetActiveScene().name == "TeamView") { TeamViewSetup("254"); } 
+        eventKey = PlayerPrefs.GetString(eventKey);
+        if (!Directory.Exists(Application.persistentDataPath + "/" + PlayerPrefs.GetString("EventKey") + "/obj")) { }
+        //if (SceneManager.GetActiveScene().name == "TeamView") { TeamViewSetup("254"); } 
 
 
     }
@@ -29,7 +30,7 @@ public class DataManager : MonoBehaviour
     public void TeamViewSetup(string teamNumber)
     {
 
-        teamFile = File.ReadAllText(Application.persistentDataPath + "/" + eventKey + "/robot/" + teamNumber + ".json");
+        teamFile = File.ReadAllText(Application.persistentDataPath + "/" + eventKey + "/obj/" + teamNumber + ".json");
         fileJson = JsonUtility.FromJson<TeamFile>(teamFile);
         updateTeamView.Invoke();
 

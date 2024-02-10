@@ -18,10 +18,6 @@ public class MatchSpawner : MonoBehaviour
     private void Start()
     {
         dataManager = DataManagerObject.GetComponent<DataManager>();
-        if (SceneManager.GetActiveScene().name == "TeamView")
-        {
-            SpawnMatches();
-        }
             dataManager.updateTeamView.AddListener(SpawnMatches);
     }
 
@@ -85,7 +81,7 @@ public class MatchSpawner : MonoBehaviour
 
         }
 
-        foreach (var match in Directory.GetFiles(Application.persistentDataPath + "/2024cmptx/alliance") )
+        foreach (var match in Directory.GetFiles(Application.persistentDataPath + $"/{PlayerPrefs.GetString("EventKey")}/subj") )
         {
             DataManager.AllianceMatch allianceFileJson = JsonUtility.FromJson<DataManager.AllianceMatch>(File.ReadAllText(match));
             if (allianceFileJson.Team1.ToString() == dataManager.fileJson.team || allianceFileJson.Team2.ToString() == dataManager.fileJson.team || allianceFileJson.Team3.ToString() == dataManager.fileJson.team) {

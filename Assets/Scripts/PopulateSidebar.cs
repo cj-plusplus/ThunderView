@@ -19,7 +19,7 @@ public class PopulateSidebar : MonoBehaviour
     void Start()
     {
         dataManager = dataManagerObject.GetComponent<DataManager>();
-        filepath = Application.persistentDataPath + "/2024cmptx/robot";
+        filepath = Application.persistentDataPath + $"/{PlayerPrefs.GetString("EventKey")}/obj";
         teams = Directory.GetFiles(filepath);
         foreach (var i in teams)
         {

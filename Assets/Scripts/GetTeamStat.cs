@@ -26,7 +26,7 @@ public class GetTeamStat : MonoBehaviour
     // Update is called once per frame
     public void Get()
     {
-        string filepath = filepath = Application.persistentDataPath + "/2024cmptx/robot/" + dataManager.fileJson.team + ".json";
+        string filepath = filepath = Application.persistentDataPath + $"/{PlayerPrefs.GetString("EventKey")}/obj/" + dataManager.fileJson.team + ".json";
         string stat = statDropdown.options[statDropdown.value].text;
         if (stat == "None") { transform.GetChild(1).gameObject.SetActive(false); return; }
         transform.GetChild(1).gameObject.SetActive(true);

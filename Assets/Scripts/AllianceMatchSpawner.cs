@@ -13,7 +13,7 @@ public class AllianceMatchSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        filepath = Application.persistentDataPath + "/2024cmptx/alliance";
+        filepath = Application.persistentDataPath + $"/{PlayerPrefs.GetString("EventKey")}/subj";
         dataManager = dataManagerObject.GetComponent<DataManager>();
         SpawnMatches("");
     }

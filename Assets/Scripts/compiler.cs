@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -18,12 +19,18 @@ public class compiler : MonoBehaviour
 
     // Update is called once per frame
 
+    public void updateEventKey()
+    {
+        PlayerPrefs.SetString("EventKey", GameObject.Find("EventKey").GetComponent<TMP_InputField>().text);
+    }
+
     public void ObjCompile()
     {
-        foreach (var match in Directory.GetFiles(filepath + "\\" + eventKey + "\\obj"))
+        eventKey = PlayerPrefs.GetString("EventKey");
+        foreach (var match in Directory.GetFiles(filepath + "/obj"))
         {
             Match matchJson = JsonUtility.FromJson<Match>(File.ReadAllText(match));
-            string teamFilePath = outputPath + "\\" + eventKey + "\\robot\\" + matchJson.TeamNumber + ".json";
+            string teamFilePath = outputPath + "\\" + eventKey + "\\obj\\" + matchJson.TeamNumber + ".json";
             TeamFile teamFile;
             List<Match> matchList;
             if (File.Exists(teamFilePath))
@@ -47,8 +54,16 @@ public class compiler : MonoBehaviour
         }
     
     }
+    public void SubjCompile()
+    {
+        eventKey = PlayerPrefs.GetString("EventKey");
+        foreach (var match in Directory.GetFiles(filepath + "/subj"))
+        {
+            File.WriteAllText(outputPath + "/" + eventKey + "/subj",File.ReadAllText(match));
+        }
+    }
 
-    [System.Serializable]
+        [System.Serializable]
     public class TeamFile
     {
         public string team;

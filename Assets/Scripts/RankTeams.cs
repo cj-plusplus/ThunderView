@@ -33,7 +33,7 @@ public class RankTeams : MonoBehaviour
     public void Get()
     {
         
-        string filepath = Application.persistentDataPath + "/2024cmptx/robot";
+        string filepath = Application.persistentDataPath + $"/{PlayerPrefs.GetString("EventKey")}/obj";
         string stat = statDropdown.options[statDropdown.value].text;
         string key = keyDropdown.options[keyDropdown.value].text;
         if (stat == "None" || key == "None") { transform.GetChild(2).gameObject.SetActive(false); return; }
