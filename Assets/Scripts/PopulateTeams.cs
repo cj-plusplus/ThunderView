@@ -15,11 +15,13 @@ public class PopulateSidebar : MonoBehaviour
     public GameObject dataManagerObject;
     private DataManager dataManager;
     public GameObject teamCellPrefab;
+    public GameObject noTeamPrefab;
     // Start is called before the first frame update
     void Start()
     {
         dataManager = dataManagerObject.GetComponent<DataManager>();
         filepath = Application.persistentDataPath + $"/{PlayerPrefs.GetString("EventKey")}/obj";
+        if (!Directory.Exists(filepath)) { Instantiate(noTeamPrefab, transform.parent);return; }
         teams = Directory.GetFiles(filepath);
         foreach (var i in teams)
         {

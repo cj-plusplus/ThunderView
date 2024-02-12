@@ -34,6 +34,7 @@ public class RankTeams : MonoBehaviour
     {
         
         string filepath = Application.persistentDataPath + $"/{PlayerPrefs.GetString("EventKey")}/obj";
+        if (!Directory.Exists(filepath)) { return; }
         string stat = statDropdown.options[statDropdown.value].text;
         string key = keyDropdown.options[keyDropdown.value].text;
         if (stat == "None" || key == "None") { transform.GetChild(2).gameObject.SetActive(false); return; }
@@ -84,7 +85,7 @@ public class RankTeams : MonoBehaviour
         // Sort for anything BUT standard deviation
         else
         {
-            
+
             foreach (var team in Directory.GetFiles(filepath))
             {
                 if (bools.Any(key.Contains)) { rankings.Add(dataManager.MiscStats(team, "teamNum"), float.Parse(dataManager.DataStats(team, key, stat, true))); }
