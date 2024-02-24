@@ -138,7 +138,7 @@ public class MatchSpawner : MonoBehaviour
             }
             
         }
-        matchCount.GetComponent<Text>().text = $"Scouted Team Matches: {teamCount}\nScouted Alliance Matches: {allianceCount}";
+        matchCount.GetComponent<Text>().text = $"Scouted Team Matches: {teamCount} | Scouted Alliance Matches: {allianceCount}";
     }
 
     // Update is called once per frame
