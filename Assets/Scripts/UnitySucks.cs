@@ -18,6 +18,7 @@ public class UnitySucks : MonoBehaviour
     // Update is called once per frame
     public void UpdateTeam()
     {
+        GameObject.Find("Stats").GetComponent<GetTeamStat>().Get(transform.GetChild(1).GetComponent<Text>().text);
         dataManager.TeamViewSetup(transform.GetChild(1).GetComponent<Text>().text);
     }
 }

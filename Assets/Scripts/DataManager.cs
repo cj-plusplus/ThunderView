@@ -20,8 +20,9 @@ public class DataManager : MonoBehaviour
     public UnityEvent updateTeamView;
     void Start()
     {
-        eventKey = "2024cmptx";
-        if (SceneManager.GetActiveScene().name == "TeamView") { TeamViewSetup("254"); } 
+        eventKey = PlayerPrefs.GetString(eventKey);
+        if (!Directory.Exists(Application.persistentDataPath + "/" + PlayerPrefs.GetString("EventKey") + "/obj")) { }
+        //if (SceneManager.GetActiveScene().name == "TeamView") { TeamViewSetup("254"); } 
 
 
     }
@@ -29,7 +30,7 @@ public class DataManager : MonoBehaviour
     public void TeamViewSetup(string teamNumber)
     {
 
-        teamFile = File.ReadAllText(Application.persistentDataPath + "/" + eventKey + "/robot/" + teamNumber + ".json");
+        teamFile = File.ReadAllText(Application.persistentDataPath + "/" + PlayerPrefs.GetString("EventKey") + "/obj/" + teamNumber + ".json");
         fileJson = JsonUtility.FromJson<TeamFile>(teamFile);
         updateTeamView.Invoke();
 
@@ -45,15 +46,18 @@ public class DataManager : MonoBehaviour
     {
         public int TeamNumber;
         public string MatchType;
-        public int MatchNumber;
         public int DataQuality;
+        public int MatchNumber;
         public bool Replay;
         public string AllianceColor;
         public int DriverStation;
         public string ScouterName;
+        public bool Preload;
+        public string StartPos;
         public bool LeftWing;
         public int AutoSpeaker;
         public int AutoAmp;
+        public int AutoPickUpWing;
         public int AutoPickUpCenter;
         public bool AStop;
         public int PickUpGround;
@@ -62,18 +66,14 @@ public class DataManager : MonoBehaviour
         public int SpeakerNotesAmped;
         public int AmpNotes;
         public bool Feeder;
-        public string EndLocation;
+        public bool Coopertition;
+        public bool Onstage;
+        public bool Park;
         public bool Spotlight;
         public bool Trap;
         public string Comments;
     }
     [System.Serializable]
-    public class TeamFile {
-        public string team;
-        public string name;
-        public Match[] matches;
-    }
-
     public class AllianceMatch
     {
         public int MatchNumber;
@@ -87,20 +87,36 @@ public class DataManager : MonoBehaviour
         public int Team3; // Anything after with the suffix "3" refers to robot 3
         public int TeamAtAmp;
         public int AutoCenterNotes;
-        public int Team1Defense;
-        public int Team2Defense;
-        public int Team3Defense;
-        public int Team1DriverSkill;
-        public int Team2DriverSkill;
-        public int Team3DriverSkill;
+        public int Team1TravelSpeed;
+        public int Team2TravelSpeed;
+        public int Team3TravelSpeed;
+        public int Team1AlignSpeed;
+        public int Team2AlignSpeed;
+        public int Team3AlignSpeed;
+        public int Team1Avoid;
+        public int Team2Avoid;
+        public int Team3Avoid;
+        
         public int AmplifyCount;
+        public int Fouls;
         public bool Coopertition;
         public int HighNotes;
         public int HighNotePotential;
-        public int Harmony;
-        public string Comments;
+        public string Harmony;
+        public string RankingComments;
+        public string StratComments;
+        public string OtherComments;
+        public bool WinMatch;
 
     }
+    [System.Serializable]
+    public class TeamFile {
+        public string team;
+        public string name;
+        public Match[] matches;
+    }
+
+  
     public string DataStats(string filepath, string key, string mode, bool boolMode = false)
     {
         string statTeamFile = File.ReadAllText(filepath);

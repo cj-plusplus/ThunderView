@@ -11,8 +11,9 @@ public class DirectorySetup : MonoBehaviour
     {
         if (!(Directory.Exists("C:\\ThunderView\\input")))
         {
-            Directory.CreateDirectory("C:\\ThunderView\\input");
-            File.WriteAllText("C:\\ThunderView\\Input\\readme.txt", readMeText);
+            Directory.CreateDirectory("C:\\ThunderView\\input\\obj");
+            Directory.CreateDirectory("C:\\ThunderView\\input\\subj");
+            File.WriteAllText("C:\\ThunderView\\input\\readme.txt", readMeText);
         }
     }
 
