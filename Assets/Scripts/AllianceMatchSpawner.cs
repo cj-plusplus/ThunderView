@@ -43,6 +43,15 @@ public class AllianceMatchSpawner : MonoBehaviour
                 if (!(matchJson.Team1.ToString() == selective || matchJson.Team2.ToString() == selective || matchJson.Team3.ToString() == selective)) {  continue; }
             }
             GameObject newMatchCell = matchPrefab;
+
+            switch (matchJson.AllianceColor)
+            {
+                case "Red":
+                    newMatchCell.gameObject.GetComponent<RawImage>().color = new Color(0.7861634f, 0.175527f, 0.2400308f, 1.0f); break;
+                case "Blue":
+                    newMatchCell.gameObject.GetComponent<RawImage>().color = new Color(0.1435662f, 0.1707795f, 0.7484276f, 1.0f); break;
+            }
+
             newMatchCell.transform.GetChild(0).GetComponent<Text>().text = matchJson.MatchNumber.ToString();
             newMatchCell.transform.GetChild(1).GetComponent<Text>().text = matchJson.MatchType;
             newMatchCell.transform.GetChild(2).GetComponent<Text>().text = $"Data Quality: {matchJson.DataQuality.ToString()}/5";

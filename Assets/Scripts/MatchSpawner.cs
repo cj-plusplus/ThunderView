@@ -46,7 +46,7 @@ public class MatchSpawner : MonoBehaviour
                 case "Red":
                     newMatchCell.gameObject.GetComponent<RawImage>().color = new Color(1.0f, 0.35686274509f, 0.27058823529f, 1.0f); break;
                 case "Blue":
-                    newMatchCell.gameObject.GetComponent<RawImage>().color = new Color(0.490196f, 0.8274509f, 1.0f, 1.0f); break;
+                    newMatchCell.gameObject.GetComponent<RawImage>().color = new Color(0.3050313f, 0.3158143f, 1.0f, 1.0f); break;
             }
             newMatchCell.transform.GetChild(0).GetComponent<Text>().text = match.MatchNumber.ToString(); // MatchNumberText
             newMatchCell.transform.GetChild(1).GetComponent<Text>().text = match.MatchType; // MatchTypeText
@@ -98,6 +98,15 @@ public class MatchSpawner : MonoBehaviour
             {
 
                 GameObject newAllianceMatchCell = allianceMatchPrefab;
+                /* Background Color for Alliance MatchCell*/
+                switch (allianceFileJson.AllianceColor)
+                {
+                    case "Red":
+                        newAllianceMatchCell.gameObject.GetComponent<RawImage>().color = new Color(0.7861634f, 0.175527f, 0.2400308f, 1.0f); break;
+                    case "Blue":
+                        newAllianceMatchCell.gameObject.GetComponent<RawImage>().color = new Color(0.1435662f, 0.1707795f, 0.7484276f, 1.0f); break;
+                }
+
                 newAllianceMatchCell.transform.GetChild(0).GetComponent<Text>().text = allianceFileJson.MatchNumber.ToString();
                 newAllianceMatchCell.transform.GetChild(1).GetComponent<Text>().text = allianceFileJson.MatchType;
                 newAllianceMatchCell.transform.GetChild(2).GetComponent<Text>().text = $"Data Quality: {allianceFileJson.DataQuality.ToString()}/5";
