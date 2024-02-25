@@ -78,7 +78,7 @@ public class MatchSpawner : MonoBehaviour
 
             if (SceneManager.GetActiveScene().name == "Rankings")
             {
-                newMatchCell.transform.localScale = new Vector3(0.58f, 0.58f, 0.58f);
+                newMatchCell.transform.localScale = new Vector3(0.425f, 0.425f, 0.425f);
             }
             else
             {
