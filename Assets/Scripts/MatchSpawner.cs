@@ -68,13 +68,21 @@ public class MatchSpawner : MonoBehaviour
             newMatchCell.transform.GetChild(8).GetChild(0).GetComponent<Text>().text = (match.Onstage ? "Onstage" : match.Park ? "Park" : "None");
             newMatchCell.transform.GetChild(8).GetChild(1).gameObject.SetActive(match.Trap);
             newMatchCell.transform.GetChild(8).GetChild(2).gameObject.SetActive(match.Spotlight);
+
+            string comments = match.Comments;
+            if (comments == null || comments == "")
+            {
+                comments = "{No Comments}";
+            }
+            newMatchCell.transform.GetChild(9).GetChild(0).GetChild(0).GetChild(0).GetChild(0).GetComponent<Text>().text = comments; //Comments
+
             if (SceneManager.GetActiveScene().name == "Rankings")
             {
                 newMatchCell.transform.localScale = new Vector3(0.58f, 0.58f, 0.58f);
             }
             else
             {
-                newMatchCell.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+                newMatchCell.transform.localScale = new Vector3(0.725f, 0.725f, 0.725f);
             }
             teamCount++;
 
