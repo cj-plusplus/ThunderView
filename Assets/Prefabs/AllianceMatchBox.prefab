@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8807840765106151862
 RectTransform:
   m_ObjectHideFlags: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Travel Speed Score 0
+  m_Text: Travel Speed Score 1
 --- !u!1 &291623692207851900
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +186,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 713.72, y: 835.74}
+  m_SizeDelta: {x: 713.72, y: 2000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4047482410603711838
 CanvasRenderer:
@@ -221,7 +221,7 @@ MonoBehaviour:
     m_FontSize: 58
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 40
+    m_MinSize: 55
     m_MaxSize: 68
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -229,7 +229,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Ranking Explanation: \nGeneral Strategy: \nOther Comments:"
+  m_Text: 'Ranking Explanation: aaa
+
+    General Strategy: aa
+
+    Other Comments:aaa'
 --- !u!1 &473075696894244211
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,7 +420,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Data Quality: 0/5'
+  m_Text: 'Data Quality: 3/5'
 --- !u!1 &913004870732547309
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,7 +499,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Team At Amp: 0'
+  m_Text: 'Team At Amp: 948'
 --- !u!1 &913251833838650702
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,7 +517,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5663799143041745714
 RectTransform:
   m_ObjectHideFlags: 0
@@ -656,7 +660,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 948
 --- !u!1 &1183301254100527598
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,7 +797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -813,7 +817,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Travel Speed Score 0
+  m_Text: Travel Speed Score 3
 --- !u!1 &1683116701022632895
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,7 +876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -892,7 +896,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Avoidance Score 0
+  m_Text: Avoidance Score 3
 --- !u!1 &2017189530020824812
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,8 +1017,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6563076649009354321}
   m_HandleRect: {fileID: 6342759104379903342}
   m_Direction: 2
-  m_Value: 1.0000437
-  m_Size: 0.99665934
+  m_Value: 1.0000001
+  m_Size: 0.416474
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1266,7 +1270,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Amplify Count: 0'
+  m_Text: 'Amplify Count: 3'
 --- !u!1 &4172695908761146595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,7 +1550,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1200
+  m_Text: 0
 --- !u!1 &4990776477265367172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1700,7 +1704,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Fouls: 0'
+  m_Text: 'Fouls: 3'
 --- !u!1 &5192949311455767057
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,7 +1763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1779,7 +1783,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Align Speed Score 0
+  m_Text: Align Speed Score 2
 --- !u!1 &5534803017379821638
 GameObject:
   m_ObjectHideFlags: 0
@@ -1858,7 +1862,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Align Speed Score 0
+  m_Text: Align Speed Score 1
 --- !u!1 &5660124590519423074
 GameObject:
   m_ObjectHideFlags: 0
@@ -2022,7 +2026,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 948
 --- !u!1 &6099466281090609682
 GameObject:
   m_ObjectHideFlags: 0
@@ -2101,7 +2105,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'High Notes: 0/0'
+  m_Text: 'High Notes: 3/3'
 --- !u!1 &6480801625434856366
 GameObject:
   m_ObjectHideFlags: 0
@@ -2160,7 +2164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2180,7 +2184,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Avoidance Score 0
+  m_Text: Avoidance Score 2
 --- !u!1 &7272898717843838308
 GameObject:
   m_ObjectHideFlags: 0
@@ -2239,7 +2243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2259,7 +2263,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Travel Speed Score 0
+  m_Text: Travel Speed Score 2
 --- !u!1 &7472781194752854557
 GameObject:
   m_ObjectHideFlags: 0
@@ -2338,7 +2342,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Scouter Name: Anonymous'
+  m_Text: 'Scouter Name: NMRGdasfjkldsfjl'
 --- !u!1 &7498845565145781168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2480,7 +2484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2500,7 +2504,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Align Speed Score 0
+  m_Text: Align Speed Score 3
 --- !u!1 &7642773446165471611
 GameObject:
   m_ObjectHideFlags: 0
@@ -2738,7 +2742,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Auto Center Notes: 0'
+  m_Text: 'Auto Center Notes: 3'
 --- !u!1 &8441568637067425945
 GameObject:
   m_ObjectHideFlags: 0
@@ -2817,4 +2821,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Avoidance Score 0
+  m_Text: Avoidance Score 1
