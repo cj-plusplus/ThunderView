@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class AllianceMatchSpawner : MonoBehaviour
@@ -84,10 +85,17 @@ public class AllianceMatchSpawner : MonoBehaviour
             newMatchCell.transform.GetChild(8).GetChild(6).GetComponent<Text>().text = $"Fouls: {matchJson.Fouls}";
             newMatchCell.transform.GetChild(9).GetChild(0).GetChild(0).GetChild(0).GetChild(0).GetComponent<Text>().text = $"Ranking Explanation: {matchJson.RankingComments}\nGeneral Strategy: {matchJson.StratComments}\nOther Comments:{matchJson.OtherComments}";
             newMatchCell.transform.GetChild(10).GetComponent<Text>().text = matchJson.WinMatch ? "WIN" : "LOSS";
+
+            if (SceneManager.GetActiveScene().name == "Rankings")
+            {
+                newMatchCell.transform.localScale = new Vector3(0.45f, 0.45f, 0.45f);
+            }
+            else
+            {
+                newMatchCell.transform.localScale = new Vector3(0.77f, 0.77f, 0.77f);
+            }
+
             newMatchCell = Instantiate(newMatchCell, transform.parent);
-
-
-
 
         }
     }
