@@ -18,7 +18,7 @@ public class MatchSpawner : MonoBehaviour
     private void Start()
     {
         dataManager = DataManagerObject.GetComponent<DataManager>();
-            dataManager.updateTeamView.AddListener(SpawnMatches);
+        dataManager.updateTeamView.AddListener(SpawnMatches);
     }
 
     void SpawnMatches()
@@ -71,9 +71,10 @@ public class MatchSpawner : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "Rankings")
             {
                 newMatchCell.transform.localScale = new Vector3(0.58f, 0.58f, 0.58f);
-            } else
+            }
+            else
             {
-                newMatchCell.transform.localScale = new Vector3(1.0f,1.0f, 1.0f);
+                newMatchCell.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
             }
             teamCount++;
 
@@ -82,10 +83,11 @@ public class MatchSpawner : MonoBehaviour
 
         }
 
-        foreach (var match in Directory.GetFiles(Application.persistentDataPath + $"/{PlayerPrefs.GetString("EventKey")}/subj") )
+        foreach (var match in Directory.GetFiles(Application.persistentDataPath + $"/{PlayerPrefs.GetString("EventKey")}/subj"))
         {
             DataManager.AllianceMatch allianceFileJson = JsonUtility.FromJson<DataManager.AllianceMatch>(File.ReadAllText(match));
-            if (allianceFileJson.Team1.ToString() == dataManager.fileJson.team || allianceFileJson.Team2.ToString() == dataManager.fileJson.team || allianceFileJson.Team3.ToString() == dataManager.fileJson.team) {
+            if (allianceFileJson.Team1.ToString() == dataManager.fileJson.team || allianceFileJson.Team2.ToString() == dataManager.fileJson.team || allianceFileJson.Team3.ToString() == dataManager.fileJson.team)
+            {
 
                 GameObject newAllianceMatchCell = allianceMatchPrefab;
                 newAllianceMatchCell.transform.GetChild(0).GetComponent<Text>().text = allianceFileJson.MatchNumber.ToString();
@@ -93,7 +95,7 @@ public class MatchSpawner : MonoBehaviour
                 newAllianceMatchCell.transform.GetChild(2).GetComponent<Text>().text = $"Data Quality: {allianceFileJson.DataQuality.ToString()}/5";
                 newAllianceMatchCell.transform.GetChild(3).GetComponent<Text>().text = $"Scouter Name: {allianceFileJson.ScouterName}";
                 newAllianceMatchCell.transform.GetChild(4).gameObject.SetActive(allianceFileJson.Replay);
-                
+
                 // Team 1 Stats
                 newAllianceMatchCell.transform.GetChild(5).GetComponent<Text>().text = allianceFileJson.Team1.ToString();
                 newAllianceMatchCell.transform.GetChild(5).GetChild(0).GetComponent<Text>().text = $"Avoidance Score {allianceFileJson.Team1Avoid}";
@@ -132,19 +134,27 @@ public class MatchSpawner : MonoBehaviour
                 newAllianceMatchCell.transform.GetChild(10).GetComponent<Text>().text = allianceFileJson.WinMatch ? "WIN" : "LOSS";
 
                 //newAllianceMatchCell.transform.GetChild(9).GetChild(0).GetChild(0).GetChild(0).GetChild(0).GetComponent<Text>().text = allianceFileJson.Comments;
-                newAllianceMatchCell.transform.localScale = new Vector3(0.77f, 0.77f, 0.77f);
+                if (SceneManager.GetActiveScene().name == "Rankings")
+                {
+                    newAllianceMatchCell.transform.localScale = new Vector3(0.45f, 0.45f, 0.45f);
+                }
+                else
+                {
+                    newAllianceMatchCell.transform.localScale = new Vector3(0.77f, 0.77f, 0.77f);
+                }
+
                 newAllianceMatchCell = Instantiate(newAllianceMatchCell, transform.parent);
                 allianceCount++;
             }
-            
+
         }
-        matchCount.GetComponent<Text>().text = $"Scouted Team Matches: {teamCount}\nScouted Alliance Matches: {allianceCount}";
+        matchCount.GetComponent<Text>().text = $"Scouted Team Matches: {teamCount} | Scouted Alliance Matches: {allianceCount}";
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
- 
+
 }
