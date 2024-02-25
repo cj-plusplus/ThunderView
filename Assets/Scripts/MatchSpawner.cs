@@ -44,9 +44,9 @@ public class MatchSpawner : MonoBehaviour
             switch (match.AllianceColor)
             {
                 case "Red":
-                    newMatchCell.gameObject.GetComponent<RawImage>().color = new Color(1.0f, 0.35686274509f, 0.27058823529f, 1.0f); break;
+                    newMatchCell.gameObject.GetComponent<RawImage>().color = new Color(0.9294118f, 0.2431373f, 0.2196078f, 1.0f); break;
                 case "Blue":
-                    newMatchCell.gameObject.GetComponent<RawImage>().color = new Color(0.3050313f, 0.3158143f, 1.0f, 1.0f); break;
+                    newMatchCell.gameObject.GetComponent<RawImage>().color = new Color(0.1960784f, 0.345098f, 0.9372549f, 1.0f); break;
             }
             newMatchCell.transform.GetChild(0).GetComponent<Text>().text = match.MatchNumber.ToString(); // MatchNumberText
             newMatchCell.transform.GetChild(1).GetComponent<Text>().text = match.MatchType; // MatchTypeText
@@ -102,9 +102,9 @@ public class MatchSpawner : MonoBehaviour
                 switch (allianceFileJson.AllianceColor)
                 {
                     case "Red":
-                        newAllianceMatchCell.gameObject.GetComponent<RawImage>().color = new Color(0.7861634f, 0.175527f, 0.2400308f, 1.0f); break;
+                        newAllianceMatchCell.gameObject.GetComponent<RawImage>().color = new Color(0.9176471f, 0.2784313f, 0.3095479f, 1.0f); break;
                     case "Blue":
-                        newAllianceMatchCell.gameObject.GetComponent<RawImage>().color = new Color(0.1435662f, 0.1707795f, 0.7484276f, 1.0f); break;
+                        newAllianceMatchCell.gameObject.GetComponent<RawImage>().color = new Color(0.2800916f, 0.3204849f, 0.9182389f, 1.0f); break;
                 }
 
                 newAllianceMatchCell.transform.GetChild(0).GetComponent<Text>().text = allianceFileJson.MatchNumber.ToString();

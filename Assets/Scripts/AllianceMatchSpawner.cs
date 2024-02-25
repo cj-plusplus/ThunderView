@@ -22,15 +22,15 @@ public class AllianceMatchSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void SpawnMatches(string selective)
     {
         if (transform.parent.childCount > 1)
         {
 
-            for (int i = 1; i <  transform.parent.childCount; i++)
-            { 
+            for (int i = 1; i < transform.parent.childCount; i++)
+            {
                 Destroy(transform.parent.GetChild(i).gameObject);
             }
         }
@@ -40,16 +40,17 @@ public class AllianceMatchSpawner : MonoBehaviour
             DataManager.AllianceMatch matchJson = JsonUtility.FromJson<DataManager.AllianceMatch>(File.ReadAllText(match));
             if (selective != "") // Search function in alliance view
             {
-                if (!(matchJson.Team1.ToString() == selective || matchJson.Team2.ToString() == selective || matchJson.Team3.ToString() == selective)) {  continue; }
+                if (!(matchJson.Team1.ToString() == selective || matchJson.Team2.ToString() == selective || matchJson.Team3.ToString() == selective)) { continue; }
             }
             GameObject newMatchCell = matchPrefab;
 
+            /* Background Color for Alliance MatchCell*/
             switch (matchJson.AllianceColor)
             {
                 case "Red":
-                    newMatchCell.gameObject.GetComponent<RawImage>().color = new Color(0.7861634f, 0.175527f, 0.2400308f, 1.0f); break;
+                    newMatchCell.gameObject.GetComponent<RawImage>().color = new Color(0.9176471f, 0.2784313f, 0.3095479f, 1.0f); break;
                 case "Blue":
-                    newMatchCell.gameObject.GetComponent<RawImage>().color = new Color(0.1435662f, 0.1707795f, 0.7484276f, 1.0f); break;
+                    newMatchCell.gameObject.GetComponent<RawImage>().color = new Color(0.2800916f, 0.3204849f, 0.9182389f, 1.0f); break;
             }
 
             newMatchCell.transform.GetChild(0).GetComponent<Text>().text = matchJson.MatchNumber.ToString();
