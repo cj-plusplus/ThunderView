@@ -10,27 +10,25 @@ public class HoverLabel : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public float hoverTime;
     bool timerOn = false;
     public string text;
+    public float height;
+    public float padding;
+    public float scale = 1f;
+    private float DEFAULT_FONT_SIZE = 30;
     Transform label;
     Transform textTransform;
-    float frameCounter = 0;
     // Start is called before the first frame update
     void Awake()
     {
         label = gameObject.transform.GetChild(0);
-        textTransform = gameObject.transform.GetChild(0).GetChild(0);
+        textTransform = gameObject.transform.GetChild(1);
 
         textTransform.GetComponent<Text>().text = text;
-        setComponent(true);
+        textTransform.GetComponent<Text>().fontSize = (int)(DEFAULT_FONT_SIZE * scale);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (frameCounter == 0) {
-            setComponent(false);
-            frameCounter++;
-        }
-
         if (timerOn) {
             tick += Time.deltaTime;
             if (tick >= hoverTime) {
@@ -55,6 +53,14 @@ public class HoverLabel : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     void setComponent(bool b)
     {
-        label.gameObject.SetActive(b);
+        Color l = label.GetComponent<Image>().color;
+        Color t = textTransform.GetComponent<Text>().color;
+        label.GetComponent<Image>().color = new Color(l.r, l.g, l.b, b ? 1f : 1f/255f);
+        textTransform.GetComponent<Text>().color = new Color(t.r, t.g, t.b, b ? 1f : 1f/255f);
+
+        label.GetComponent<RectTransform>().sizeDelta =
+            new Vector2(
+                textTransform.gameObject.GetComponent<RectTransform>().sizeDelta.x + padding * scale * 2,
+                height * scale);
     }
 }
