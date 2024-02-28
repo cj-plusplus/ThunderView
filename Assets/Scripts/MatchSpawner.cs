@@ -63,12 +63,13 @@ public class MatchSpawner : MonoBehaviour
             newMatchCell.transform.GetChild(7).GetChild(1).GetComponent<Text>().text = match.SpeakerNotesUnamped.ToString(); // SpeakerNotesUnamped
             newMatchCell.transform.GetChild(7).GetChild(3).GetComponent<Text>().text = match.SpeakerNotesAmped.ToString(); // SpeakerNotesAmped
             newMatchCell.transform.GetChild(7).GetChild(5).GetComponent<Text>().text = match.AmpNotes.ToString(); // SpeakerNotesUnamped'
-            newMatchCell.transform.GetChild(7).GetChild(7).GetComponent<Text>().text = $"Source: {match.PickUpSource}\nGround: {match.PickUpGround}";
-            newMatchCell.transform.GetChild(7).GetChild(8).gameObject.SetActive(match.Feeder);
-            newMatchCell.transform.GetChild(8).GetChild(0).GetComponent<Text>().text = (match.Onstage ? "Onstage" : match.Park ? "Park" : "None");
-            newMatchCell.transform.GetChild(8).GetChild(1).gameObject.SetActive(match.Trap);
-            newMatchCell.transform.GetChild(8).GetChild(2).gameObject.SetActive(match.Spotlight);
-
+            newMatchCell.transform.GetChild(7).GetChild(7).GetComponent<Text>().text = $"Source: {match.PickUpSource}\nGround: {match.PickUpGround}"; // Pickuptext
+            newMatchCell.transform.GetChild(7).GetChild(8).gameObject.SetActive(match.Feeder); // FreederIcon
+            newMatchCell.transform.GetChild(8).GetChild(0).GetComponent<Text>().text = (match.Onstage ? "Onstage" : match.Park ? "Park" : "None"); // EndLocationText
+            newMatchCell.transform.GetChild(8).GetChild(1).gameObject.SetActive(match.Trap); // Trap
+            newMatchCell.transform.GetChild(8).GetChild(2).gameObject.SetActive(match.Spotlight); // Spotlight
+            newMatchCell.transform.GetChild(8).GetChild(3).gameObject.SetActive(match.Park); // Park
+           
             string comments = match.Comments;
             if (comments == null || comments == "")
             {
