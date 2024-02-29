@@ -79,7 +79,7 @@ public class MatchSpawner : MonoBehaviour
 
             if (SceneManager.GetActiveScene().name == "Rankings")
             {
-                newMatchCell.transform.localScale = new Vector3(0.425f, 0.425f, 0.425f);
+                newMatchCell.transform.localScale = new Vector3(0.55f, 0.55f, 0.55f);
             }
             else
             {
@@ -116,30 +116,30 @@ public class MatchSpawner : MonoBehaviour
 
                 // Team 1 Stats
                 newAllianceMatchCell.transform.GetChild(5).GetComponent<Text>().text = allianceFileJson.Team1.ToString();
-                newAllianceMatchCell.transform.GetChild(5).GetChild(0).GetComponent<Text>().text = $"Avoidance Score {allianceFileJson.Team1Avoid}";
-                newAllianceMatchCell.transform.GetChild(5).GetChild(0).GetComponent<Text>().color = allianceFileJson.Team1Avoid == 3 ? Color.green : allianceFileJson.Team1Avoid == 2 ? Color.white : Color.black;
-                newAllianceMatchCell.transform.GetChild(5).GetChild(1).GetComponent<Text>().text = $"Travel Speed Score {allianceFileJson.Team1TravelSpeed}";
-                newAllianceMatchCell.transform.GetChild(5).GetChild(1).GetComponent<Text>().color = allianceFileJson.Team1TravelSpeed == 3 ? Color.green : allianceFileJson.Team1TravelSpeed == 2 ? Color.white : Color.black;
-                newAllianceMatchCell.transform.GetChild(5).GetChild(2).GetComponent<Text>().text = $"Align Speed Score {allianceFileJson.Team1AlignSpeed}";
-                newAllianceMatchCell.transform.GetChild(5).GetChild(2).GetComponent<Text>().color = allianceFileJson.Team1AlignSpeed == 3 ? Color.green : allianceFileJson.Team1AlignSpeed == 2 ? Color.white : Color.black;
+                newAllianceMatchCell.transform.GetChild(5).GetChild(0).GetComponent<BarDisplay>().setValue(allianceFileJson.Team1Avoid);
+                newAllianceMatchCell.transform.GetChild(5).GetChild(0).GetComponent<BarDisplay>().setColor(allianceFileJson.Team1Avoid == 3 ? Color.green : allianceFileJson.Team1Avoid == 2 ? Color.white : Color.black);
+                newAllianceMatchCell.transform.GetChild(5).GetChild(1).GetComponent<BarDisplay>().setValue(allianceFileJson.Team1TravelSpeed);
+                newAllianceMatchCell.transform.GetChild(5).GetChild(1).GetComponent<BarDisplay>().setColor(allianceFileJson.Team1TravelSpeed == 3 ? Color.green : allianceFileJson.Team1TravelSpeed == 2 ? Color.white : Color.black);
+                newAllianceMatchCell.transform.GetChild(5).GetChild(2).GetComponent<BarDisplay>().setValue(allianceFileJson.Team1AlignSpeed);
+                newAllianceMatchCell.transform.GetChild(5).GetChild(2).GetComponent<BarDisplay>().setColor(allianceFileJson.Team1AlignSpeed == 3 ? Color.green : allianceFileJson.Team1AlignSpeed == 2 ? Color.white : Color.black);
 
                 // Team 2 Stats
-                newAllianceMatchCell.transform.GetChild(6).GetComponent<Text>().text = allianceFileJson.Team2.ToString();
-                newAllianceMatchCell.transform.GetChild(6).GetChild(0).GetComponent<Text>().text = $"Avoidance Score {allianceFileJson.Team2Avoid}";
-                newAllianceMatchCell.transform.GetChild(6).GetChild(0).GetComponent<Text>().color = allianceFileJson.Team2Avoid == 3 ? Color.green : allianceFileJson.Team2Avoid == 2 ? Color.white : Color.black;
-                newAllianceMatchCell.transform.GetChild(6).GetChild(1).GetComponent<Text>().text = $"Travel Speed Score {allianceFileJson.Team2TravelSpeed}";
-                newAllianceMatchCell.transform.GetChild(6).GetChild(1).GetComponent<Text>().color = allianceFileJson.Team2TravelSpeed == 3 ? Color.green : allianceFileJson.Team2TravelSpeed == 2 ? Color.white : Color.black;
-                newAllianceMatchCell.transform.GetChild(6).GetChild(2).GetComponent<Text>().text = $"Align Speed Score {allianceFileJson.Team2AlignSpeed}";
-                newAllianceMatchCell.transform.GetChild(6).GetChild(2).GetComponent<Text>().color = allianceFileJson.Team2AlignSpeed == 3 ? Color.green : allianceFileJson.Team2AlignSpeed == 2 ? Color.white : Color.black;
+                newAllianceMatchCell.transform.GetChild(6).GetComponent<Text>().text = allianceFileJson.Team1.ToString();
+                newAllianceMatchCell.transform.GetChild(6).GetChild(0).GetComponent<BarDisplay>().setValue(allianceFileJson.Team2Avoid);
+                newAllianceMatchCell.transform.GetChild(6).GetChild(0).GetComponent<BarDisplay>().setColor(allianceFileJson.Team2Avoid == 3 ? Color.green : allianceFileJson.Team1Avoid == 2 ? Color.white : Color.black);
+                newAllianceMatchCell.transform.GetChild(6).GetChild(1).GetComponent<BarDisplay>().setValue(allianceFileJson.Team2TravelSpeed);
+                newAllianceMatchCell.transform.GetChild(6).GetChild(1).GetComponent<BarDisplay>().setColor(allianceFileJson.Team2TravelSpeed == 3 ? Color.green : allianceFileJson.Team1TravelSpeed == 2 ? Color.white : Color.black);
+                newAllianceMatchCell.transform.GetChild(6).GetChild(2).GetComponent<BarDisplay>().setValue(allianceFileJson.Team2AlignSpeed);
+                newAllianceMatchCell.transform.GetChild(6).GetChild(2).GetComponent<BarDisplay>().setColor(allianceFileJson.Team2AlignSpeed == 3 ? Color.green : allianceFileJson.Team1AlignSpeed == 2 ? Color.white : Color.black);
 
                 // Team 3 Stats
-                newAllianceMatchCell.transform.GetChild(7).GetComponent<Text>().text = allianceFileJson.Team3.ToString();
-                newAllianceMatchCell.transform.GetChild(7).GetChild(0).GetComponent<Text>().text = $"Avoidance Score {allianceFileJson.Team3Avoid}";
-                newAllianceMatchCell.transform.GetChild(7).GetChild(0).GetComponent<Text>().color = allianceFileJson.Team3Avoid == 3 ? Color.green : allianceFileJson.Team3Avoid == 2 ? Color.white : Color.black;
-                newAllianceMatchCell.transform.GetChild(7).GetChild(1).GetComponent<Text>().text = $"Travel Speed Score {allianceFileJson.Team3TravelSpeed}";
-                newAllianceMatchCell.transform.GetChild(7).GetChild(1).GetComponent<Text>().color = allianceFileJson.Team3TravelSpeed == 3 ? Color.green : allianceFileJson.Team3TravelSpeed == 2 ? Color.white : Color.black;
-                newAllianceMatchCell.transform.GetChild(7).GetChild(2).GetComponent<Text>().text = $"Align Speed Score {allianceFileJson.Team3AlignSpeed}";
-                newAllianceMatchCell.transform.GetChild(7).GetChild(2).GetComponent<Text>().color = allianceFileJson.Team3AlignSpeed == 3 ? Color.green : allianceFileJson.Team3AlignSpeed == 2 ? Color.white : Color.black;
+                newAllianceMatchCell.transform.GetChild(7).GetComponent<Text>().text = allianceFileJson.Team1.ToString();
+                newAllianceMatchCell.transform.GetChild(7).GetChild(0).GetComponent<BarDisplay>().setValue(allianceFileJson.Team3Avoid);
+                newAllianceMatchCell.transform.GetChild(7).GetChild(0).GetComponent<BarDisplay>().setColor(allianceFileJson.Team3Avoid == 3 ? Color.green : allianceFileJson.Team1Avoid == 2 ? Color.white : Color.black);
+                newAllianceMatchCell.transform.GetChild(7).GetChild(1).GetComponent<BarDisplay>().setValue(allianceFileJson.Team3TravelSpeed);
+                newAllianceMatchCell.transform.GetChild(7).GetChild(1).GetComponent<BarDisplay>().setColor(allianceFileJson.Team3TravelSpeed == 3 ? Color.green : allianceFileJson.Team1TravelSpeed == 2 ? Color.white : Color.black);
+                newAllianceMatchCell.transform.GetChild(7).GetChild(2).GetComponent<BarDisplay>().setValue(allianceFileJson.Team3AlignSpeed);
+                newAllianceMatchCell.transform.GetChild(7).GetChild(2).GetComponent<BarDisplay>().setColor(allianceFileJson.Team3AlignSpeed == 3 ? Color.green : allianceFileJson.Team1AlignSpeed == 2 ? Color.white : Color.black);
 
                 newAllianceMatchCell.transform.GetChild(8).GetChild(0).GetComponent<Text>().text = $"Auto Center Notes: {allianceFileJson.AutoCenterNotes}";
                 newAllianceMatchCell.transform.GetChild(8).GetChild(1).GetComponent<Text>().text = $"High Notes: {allianceFileJson.HighNotes}/{allianceFileJson.HighNotePotential}";
@@ -154,11 +154,11 @@ public class MatchSpawner : MonoBehaviour
                 //newAllianceMatchCell.transform.GetChild(9).GetChild(0).GetChild(0).GetChild(0).GetChild(0).GetComponent<Text>().text = allianceFileJson.Comments;
                 if (SceneManager.GetActiveScene().name == "Rankings")
                 {
-                    newAllianceMatchCell.transform.localScale = new Vector3(0.45f, 0.45f, 0.45f);
+                    newAllianceMatchCell.transform.localScale = new Vector3(0.55f, 0.55f, 0.55f);
                 }
                 else
                 {
-                    newAllianceMatchCell.transform.localScale = new Vector3(0.77f, 0.77f, 0.77f);
+                    newAllianceMatchCell.transform.localScale = new Vector3(0.725f, 0.725f, 0.725f);
                 }
 
                 newAllianceMatchCell = Instantiate(newAllianceMatchCell, transform.parent);
