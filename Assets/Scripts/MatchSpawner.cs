@@ -54,16 +54,16 @@ public class MatchSpawner : MonoBehaviour
             newMatchCell.transform.GetChild(3).GetComponent<Text>().text = $"Scouter Name {match.ScouterName}"; //ScouterNameText
             newMatchCell.transform.GetChild(4).gameObject.SetActive(match.Replay); // Replay
             newMatchCell.transform.GetChild(5).GetComponent<Text>().text = $"DS {match.DriverStation.ToString()}"; // DriverStation
-            newMatchCell.transform.GetChild(6).GetChild(1).GetComponent<Text>().text = match.AutoSpeaker.ToString(); // AutoSpeakerText
-            newMatchCell.transform.GetChild(6).GetChild(3).GetComponent<Text>().text = match.AutoAmp.ToString(); // AutoAmpText
-            newMatchCell.transform.GetChild(6).GetChild(5).GetComponent<Text>().text = match.AutoPickUpCenter.ToString(); // Pickuptext
+            newMatchCell.transform.GetChild(6).GetChild(0).GetComponent<Text>().text = match.AutoSpeaker.ToString(); // AutoSpeakerText
+            newMatchCell.transform.GetChild(6).GetChild(2).GetComponent<Text>().text = match.AutoAmp.ToString(); // AutoAmpText
+            newMatchCell.transform.GetChild(6).GetChild(4).GetComponent<Text>().text = match.AutoPickUpCenter.ToString(); // Pickuptext
             newMatchCell.transform.GetChild(6).GetChild(6).gameObject.SetActive(match.AStop); // AStop
             newMatchCell.transform.GetChild(6).GetChild(7).gameObject.SetActive(match.LeftWing); // LeftWing
             newMatchCell.transform.GetChild(6).GetChild(8).gameObject.SetActive(match.Preload); // Preload
-            newMatchCell.transform.GetChild(7).GetChild(1).GetComponent<Text>().text = match.SpeakerNotesUnamped.ToString(); // SpeakerNotesUnamped
-            newMatchCell.transform.GetChild(7).GetChild(3).GetComponent<Text>().text = match.SpeakerNotesAmped.ToString(); // SpeakerNotesAmped
-            newMatchCell.transform.GetChild(7).GetChild(5).GetComponent<Text>().text = match.AmpNotes.ToString(); // SpeakerNotesUnamped'
-            newMatchCell.transform.GetChild(7).GetChild(7).GetComponent<Text>().text = $"Source: {match.PickUpSource}\nGround: {match.PickUpGround}"; // Pickuptext
+            newMatchCell.transform.GetChild(7).GetChild(0).GetComponent<Text>().text = match.SpeakerNotesUnamped.ToString(); // SpeakerNotesUnamped
+            newMatchCell.transform.GetChild(7).GetChild(2).GetComponent<Text>().text = match.SpeakerNotesAmped.ToString(); // SpeakerNotesAmped
+            newMatchCell.transform.GetChild(7).GetChild(4).GetComponent<Text>().text = match.AmpNotes.ToString(); // SpeakerNotesUnamped'
+            newMatchCell.transform.GetChild(7).GetChild(6).GetComponent<Text>().text = $"Source: {match.PickUpSource}\nGround: {match.PickUpGround}"; // Pickuptext
             newMatchCell.transform.GetChild(7).GetChild(8).gameObject.SetActive(match.Feeder); // FreederIcon
             newMatchCell.transform.GetChild(8).GetChild(0).GetComponent<Text>().text = (match.Onstage ? "Onstage" : match.Park ? "Park" : "None"); // EndLocationText
             newMatchCell.transform.GetChild(8).GetChild(1).gameObject.SetActive(match.Trap); // Trap
