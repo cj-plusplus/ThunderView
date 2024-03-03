@@ -150,8 +150,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Ranking Explanation: Dis very good swfoweofn sd sdbwel rgis e\nGeneral
-    Strategy: ehey hey hey \nOther Comments:commentos very good muy beeeeeean"
+  m_Text: "Ranking Explanation: 5937 was very fast but did not avoid obstacles well.
+    \nGeneral Strategy: More variety in where bots scored with notes\nOther Comments:5937
+    went out of commission after awhile and stopped to the left of the speaker."
 --- !u!1 &473075696894244211
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,7 +339,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Data Quality: 2/5'
+  m_Text: 'Data Quality: 3/5'
 --- !u!1 &660122524664468104
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,7 +509,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5663799143041745714
 RectTransform:
   m_ObjectHideFlags: 0
@@ -651,7 +652,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 948
+  m_Text: 5937
 --- !u!1 &1183301254100527598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,7 +1081,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: WIN
+  m_Text: LOSS
 --- !u!1 &3956786416152247625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,7 +1250,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Amplify Count: 2'
+  m_Text: 'Amplify Count: 0'
 --- !u!1 &4172695908761146595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,7 +1451,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Playoffs
+  m_Text: Qualifications
 --- !u!1 &4783344071554791597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1529,7 +1530,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3
+  m_Text: 4
 --- !u!1 &4990776477265367172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1683,7 +1684,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Fouls: 21'
+  m_Text: 'Fouls: 0'
 --- !u!1 &5660124590519423074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1765,7 +1766,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2122
+  m_Text: 5937
 --- !u!1 &5735501570999143360
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,7 +1921,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1318
+  m_Text: 5937
 --- !u!1 &6020714502217327494
 GameObject:
   m_ObjectHideFlags: 0
@@ -2072,7 +2073,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'High Notes: 1/10'
+  m_Text: 'High Notes: 0/0'
 --- !u!1 &6138500858100113751
 GameObject:
   m_ObjectHideFlags: 0
@@ -2443,7 +2444,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Scouter Name: Ryan Zou'
+  m_Text: 'Scouter Name: Kelly'
 --- !u!1 &7498845565145781168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2471,7 +2472,7 @@ RectTransform:
   m_GameObject: {fileID: 7498845565145781168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.77, y: 0.77, z: 0.77}
+  m_LocalScale: {x: 0.725, y: 0.725, z: 0.725}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6127772421875115512}
@@ -2513,7 +2514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2800916, g: 0.3204849, b: 0.9182389, a: 1}
+  m_Color: {r: 0.9176471, g: 0.2784313, b: 0.3095479, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2605,7 +2606,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Bots in Harmony: Triple'
+  m_Text: 'Bots in Harmony: None'
 --- !u!1 &7858581264431945170
 GameObject:
   m_ObjectHideFlags: 0
@@ -2764,7 +2765,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Auto Center Notes: 2'
+  m_Text: 'Auto Center Notes: 0'
 --- !u!1001 &444659595879981767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2859,15 +2860,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6744815079958587352, guid: dca916eb7b878904e9f404fe4c36b744, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6744815079958587352, guid: dca916eb7b878904e9f404fe4c36b744, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6744815079958587352, guid: dca916eb7b878904e9f404fe4c36b744, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9152488294852134401, guid: dca916eb7b878904e9f404fe4c36b744, type: 3}
       propertyPath: value
@@ -3216,15 +3217,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6744815079958587352, guid: dca916eb7b878904e9f404fe4c36b744, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6744815079958587352, guid: dca916eb7b878904e9f404fe4c36b744, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6744815079958587352, guid: dca916eb7b878904e9f404fe4c36b744, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9152488294852134401, guid: dca916eb7b878904e9f404fe4c36b744, type: 3}
       propertyPath: value
@@ -3349,7 +3350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9152488294852134401, guid: dca916eb7b878904e9f404fe4c36b744, type: 3}
       propertyPath: value
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3462,7 +3463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6744815079958587352, guid: dca916eb7b878904e9f404fe4c36b744, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6744815079958587352, guid: dca916eb7b878904e9f404fe4c36b744, type: 3}
       propertyPath: m_Color.r
@@ -3470,7 +3471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9152488294852134401, guid: dca916eb7b878904e9f404fe4c36b744, type: 3}
       propertyPath: value
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4066,7 +4067,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9152488294852134401, guid: dca916eb7b878904e9f404fe4c36b744, type: 3}
       propertyPath: value
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4187,7 +4188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9152488294852134401, guid: dca916eb7b878904e9f404fe4c36b744, type: 3}
       propertyPath: value
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4296,19 +4297,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6744815079958587352, guid: dca916eb7b878904e9f404fe4c36b744, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6744815079958587352, guid: dca916eb7b878904e9f404fe4c36b744, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6744815079958587352, guid: dca916eb7b878904e9f404fe4c36b744, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9152488294852134401, guid: dca916eb7b878904e9f404fe4c36b744, type: 3}
       propertyPath: value
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4665,7 +4666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9152488294852134401, guid: dca916eb7b878904e9f404fe4c36b744, type: 3}
       propertyPath: value
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

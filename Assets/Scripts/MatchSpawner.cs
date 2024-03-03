@@ -124,7 +124,7 @@ public class MatchSpawner : MonoBehaviour
                 newAllianceMatchCell.transform.GetChild(5).GetChild(2).GetComponent<BarDisplay>().setColor(allianceFileJson.Team1AlignSpeed == 3 ? Color.green : allianceFileJson.Team1AlignSpeed == 2 ? Color.white : Color.black);
 
                 // Team 2 Stats
-                newAllianceMatchCell.transform.GetChild(6).GetComponent<Text>().text = allianceFileJson.Team1.ToString();
+                newAllianceMatchCell.transform.GetChild(6).GetComponent<Text>().text = allianceFileJson.Team2.ToString();
                 newAllianceMatchCell.transform.GetChild(6).GetChild(0).GetComponent<BarDisplay>().setValue(allianceFileJson.Team2Avoid);
                 newAllianceMatchCell.transform.GetChild(6).GetChild(0).GetComponent<BarDisplay>().setColor(allianceFileJson.Team2Avoid == 3 ? Color.green : allianceFileJson.Team1Avoid == 2 ? Color.white : Color.black);
                 newAllianceMatchCell.transform.GetChild(6).GetChild(1).GetComponent<BarDisplay>().setValue(allianceFileJson.Team2TravelSpeed);
@@ -133,7 +133,7 @@ public class MatchSpawner : MonoBehaviour
                 newAllianceMatchCell.transform.GetChild(6).GetChild(2).GetComponent<BarDisplay>().setColor(allianceFileJson.Team2AlignSpeed == 3 ? Color.green : allianceFileJson.Team1AlignSpeed == 2 ? Color.white : Color.black);
 
                 // Team 3 Stats
-                newAllianceMatchCell.transform.GetChild(7).GetComponent<Text>().text = allianceFileJson.Team1.ToString();
+                newAllianceMatchCell.transform.GetChild(7).GetComponent<Text>().text = allianceFileJson.Team3.ToString();
                 newAllianceMatchCell.transform.GetChild(7).GetChild(0).GetComponent<BarDisplay>().setValue(allianceFileJson.Team3Avoid);
                 newAllianceMatchCell.transform.GetChild(7).GetChild(0).GetComponent<BarDisplay>().setColor(allianceFileJson.Team3Avoid == 3 ? Color.green : allianceFileJson.Team1Avoid == 2 ? Color.white : Color.black);
                 newAllianceMatchCell.transform.GetChild(7).GetChild(1).GetComponent<BarDisplay>().setValue(allianceFileJson.Team3TravelSpeed);

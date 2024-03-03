@@ -266,9 +266,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Source: 0
+  m_Text: 'Source: 1
 
-    Ground: 0'
+    Ground: 7'
 --- !u!1 &442002800134535778
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,7 +625,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Data Quality: 0/5'
+  m_Text: 'Data Quality: 5/5'
 --- !u!1 &1166697439494470927
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,7 +722,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4592083278546876017
 RectTransform:
   m_ObjectHideFlags: 0
@@ -856,7 +856,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: DS 3
+  m_Text: DS 2
 --- !u!1 &1481078337413594638
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,7 +935,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '{No Comments}'
+  m_Text: Missed every single note. Their auto was literally spinning in place, and
+    their alliance partners crashed into it
 --- !u!1 &1685568608503851784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,7 +1628,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: None
+  m_Text: Onstage
 --- !u!1 &3157275084285613118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,7 +1707,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 4
 --- !u!1 &3398659657296708263
 GameObject:
   m_ObjectHideFlags: 0
@@ -1775,7 +1776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.92941177, g: 0.24313726, b: 0.21960784, a: 1}
+  m_Color: {r: 0.9294118, g: 0.2431373, b: 0.2196078, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2334,7 +2335,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6230294123109075070
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3137,7 +3138,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Scouter Name Anonymous
+  m_Text: Scouter Name Ryan Zou
 --- !u!1 &9092126005266661692
 GameObject:
   m_ObjectHideFlags: 0
